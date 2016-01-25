@@ -15,5 +15,24 @@
 #define kDeviceWidth           [UIScreen mainScreen].bounds.size.width
 #define KDeviceHeight          [UIScreen mainScreen].bounds.size.height
 
+//RGB颜色
+#define ColorWithRGB(_R,_G,_B,_A)      [UIColor colorWithRed:_R/255.0 green:_G/255.0 blue:_B/255.0 alpha:_A];
+//16进制颜色转换成UIColor
+#define ColorWithHex(hex,alph)            [UIColor colorWithRed:((float)((hex & 0xFF0000) >> 16))/255.0 green:((float)((hex & 0xFF00) >> 8))/255.0 blue:((float)(hex & 0xFF))/255.0 alpha:(alph)]
+//导航栏的背景色
+#define kNavigationBarColor     ColorWithRGB(238,94,94,1)
+//view的背景色
+#define kVCViewBGColor          ColorWithRGB(238,238,238,1)
+
+//常用颜色
+#define color_clearColor         [UIColor clearColor]
+#define color_whiteColor         [UIColor whiteColor]
+#define color_blackColor         [UIColor blackColor]
+
+//字体
+#define XSFont(_size)         [UIFont systemFontOfSize:_size]
+#define XSBlodFont(_size)   [UIFont boldSystemFontOfSize:_size] //加粗
+
+
 
 #endif /* PrefixHeader_pch */
